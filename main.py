@@ -67,12 +67,12 @@ def parser():
                     product_barcode = sheet_workbook[COLUMN_C + str(i)].value
                     product_sku = sheet_workbook[COLUMN_D + str(i)].value
                     product_id = sheet_workbook[COLUMN_E + str(i)].value
-                    product_shipment = int(sheet_workbook[COLUMN_F + str(i)].value)
-                    product_sale = int(sheet_workbook[COLUMN_G + str(i)].value)
-                    product_refund = int(sheet_workbook[COLUMN_H + str(i)].value)
-                    product_defect = int(sheet_workbook[COLUMN_I + str(i)].value)
-                    product_cost_price = float(sheet_workbook[COLUMN_J + str(i)].value.replace(DOT, COMMA))
-                    product_price = float(sheet_workbook[COLUMN_K + str(i)].value.replace(DOT, COMMA))
+                    product_shipment = float(sheet_workbook[COLUMN_F + str(i)].value.replace(DOT, COMMA))
+                    product_sale = float(sheet_workbook[COLUMN_G + str(i)].value.replace(DOT, COMMA))
+                    product_refund = float(sheet_workbook[COLUMN_H + str(i)].value.replace(DOT, COMMA))
+                    product_defect = float(sheet_workbook[COLUMN_I + str(i)].value.replace(DASH, DOT))
+                    product_cost_price = float(sheet_workbook[COLUMN_J + str(i)].value.replace(DASH, DOT))
+                    product_price = float(sheet_workbook[COLUMN_K + str(i)].value)
                     product_price_sum = sheet_workbook[COLUMN_L + str(i)].value
 
                     print(
